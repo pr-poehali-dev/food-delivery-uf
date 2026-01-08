@@ -11,6 +11,7 @@ interface MenuItem {
   description: string;
   price: number;
   category: string;
+  image: string;
 }
 
 interface CartItem extends MenuItem {
@@ -18,61 +19,61 @@ interface CartItem extends MenuItem {
 }
 
 const menuData: MenuItem[] = [
-  { id: '1', name: 'Чечевичный суп', description: 'Нежнейший крем-суп из отборной чечевицы, и свежих овощей.', price: 350, category: 'Супы' },
-  { id: '2', name: 'Суп лапша', description: 'Нежный говяжье-куриный бульон с домашней лапшой.', price: 320, category: 'Супы' },
-  { id: '3', name: 'Том-ям с морепродуктами', description: 'Острый тайский суп с добавлением морепродуктов с рисом.', price: 480, category: 'Супы' },
-  { id: '4', name: 'Борщ', description: 'Настоящий славянский суп, на говяжье-курином бульоне, с добавлением сала.', price: 340, category: 'Супы' },
+  { id: '1', name: 'Чечевичный суп', description: 'Нежнейший крем-суп из отборной чечевицы, и свежих овощей.', price: 350, category: 'Супы', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '2', name: 'Суп лапша', description: 'Нежный говяжье-куриный бульон с домашней лапшой.', price: 320, category: 'Супы', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '3', name: 'Том-ям с морепродуктами', description: 'Острый тайский суп с добавлением морепродуктов с рисом.', price: 480, category: 'Супы', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '4', name: 'Борщ', description: 'Настоящий славянский суп, на говяжье-курином бульоне, с добавлением сала.', price: 340, category: 'Супы', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
   
-  { id: '5', name: 'Индийский карри с морепродуктами', description: 'Остро-сливочное блюдо с добавление свежих овощей и морепродуктов.', price: 520, category: 'Пан-Азия' },
-  { id: '6', name: 'Индийский чикен-карри', description: 'Остро-сливочное блюдо с добавление свежих овощей и цыпленка.', price: 450, category: 'Пан-Азия' },
-  { id: '7', name: 'Пад-Тай с цыпленком', description: 'Острое блюдо с пряным послевкусием с добавлением молодого цыпленка.', price: 440, category: 'Пан-Азия' },
-  { id: '8', name: 'Пад-Тай с морепродуктами', description: 'Острое блюдо с пряным послевкусием с добавлением морепродуктов.', price: 510, category: 'Пан-Азия' },
+  { id: '5', name: 'Индийский карри с морепродуктами', description: 'Остро-сливочное блюдо с добавление свежих овощей и морепродуктов.', price: 520, category: 'Пан-Азия', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '6', name: 'Индийский чикен-карри', description: 'Остро-сливочное блюдо с добавление свежих овощей и цыпленка.', price: 450, category: 'Пан-Азия', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '7', name: 'Пад-Тай с цыпленком', description: 'Острое блюдо с пряным послевкусием с добавлением молодого цыпленка.', price: 440, category: 'Пан-Азия', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '8', name: 'Пад-Тай с морепродуктами', description: 'Острое блюдо с пряным послевкусием с добавлением морепродуктов.', price: 510, category: 'Пан-Азия', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
   
-  { id: '9', name: 'Хинкали с говядиной-свининой', description: 'Сочнейшие хинкали с миксом фарша говядины и свинины в фирменном тесте собственного производства.', price: 380, category: 'Хинкали' },
-  { id: '10', name: 'Хинкали с ягненком', description: 'Сочнейшие хинкали с фаршем ягненка в фирменном тесте собственного производства.', price: 420, category: 'Хинкали' },
-  { id: '11', name: 'Хинкали с говядиной', description: 'Сочнейшие хинкали с фаршем говядины в фирменном тесте собственного производства.', price: 400, category: 'Хинкали' },
-  { id: '12', name: 'Хинкали с цыпленком и сыром', description: 'Сочнейшие хинкали с цыпленком и копченным сыром в фирменном тесте собственного производства.', price: 390, category: 'Хинкали' },
-  { id: '13', name: 'Хинкали с миксом сыров', description: 'Сочнейшие хинкали с миксом сыров в фирменном тесте собственного производства.', price: 410, category: 'Хинкали' },
+  { id: '9', name: 'Хинкали с говядиной-свининой', description: 'Сочнейшие хинкали с миксом фарша говядины и свинины в фирменном тесте собственного производства.', price: 380, category: 'Хинкали', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '10', name: 'Хинкали с ягненком', description: 'Сочнейшие хинкали с фаршем ягненка в фирменном тесте собственного производства.', price: 420, category: 'Хинкали', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '11', name: 'Хинкали с говядиной', description: 'Сочнейшие хинкали с фаршем говядины в фирменном тесте собственного производства.', price: 400, category: 'Хинкали', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '12', name: 'Хинкали с цыпленком и сыром', description: 'Сочнейшие хинкали с цыпленком и копченным сыром в фирменном тесте собственного производства.', price: 390, category: 'Хинкали', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '13', name: 'Хинкали с миксом сыров', description: 'Сочнейшие хинкали с миксом сыров в фирменном тесте собственного производства.', price: 410, category: 'Хинкали', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
   
-  { id: '14', name: 'Пицца Пепперони', description: 'Классическая пицца с воздушным тестом, ароматной пеперони и тянущимся сыром.', price: 550, category: 'Пицца' },
-  { id: '15', name: 'Пицца Маргарита', description: 'Классическая пицца с воздушным тестом, из рубленных томатов пелати, тянущейся моцареллой под соусом песто.', price: 480, category: 'Пицца' },
-  { id: '16', name: 'Пицца 4-сыра', description: 'Разнообразие сыров заставит вас посмотреть на классическую пиццу по новому.', price: 580, category: 'Пицца' },
-  { id: '17', name: 'Пицца Куриная карри', description: 'Оригинальное сочетание индийских специй и итальянской пиццы.', price: 560, category: 'Пицца' },
-  { id: '18', name: 'Пицца с ростбифом', description: 'Премиальная пицца с нежным ростбифом.', price: 620, category: 'Пицца' },
-  { id: '19', name: 'Пицца Морская', description: 'Щедрое сочетание морепродуктов на тонком тесте.', price: 650, category: 'Пицца' },
+  { id: '14', name: 'Пицца Пепперони', description: 'Классическая пицца с воздушным тестом, ароматной пеперони и тянущимся сыром.', price: 550, category: 'Пицца', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/25c496e6-59d0-44e4-a3ec-bccc7d567e32.jpg' },
+  { id: '15', name: 'Пицца Маргарита', description: 'Классическая пицца с воздушным тестом, из рубленных томатов пелати, тянущейся моцареллой под соусом песто.', price: 480, category: 'Пицца', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/25c496e6-59d0-44e4-a3ec-bccc7d567e32.jpg' },
+  { id: '16', name: 'Пицца 4-сыра', description: 'Разнообразие сыров заставит вас посмотреть на классическую пиццу по новому.', price: 580, category: 'Пицца', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/25c496e6-59d0-44e4-a3ec-bccc7d567e32.jpg' },
+  { id: '17', name: 'Пицца Куриная карри', description: 'Оригинальное сочетание индийских специй и итальянской пиццы.', price: 560, category: 'Пицца', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/25c496e6-59d0-44e4-a3ec-bccc7d567e32.jpg' },
+  { id: '18', name: 'Пицца с ростбифом', description: 'Премиальная пицца с нежным ростбифом.', price: 620, category: 'Пицца', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/25c496e6-59d0-44e4-a3ec-bccc7d567e32.jpg' },
+  { id: '19', name: 'Пицца Морская', description: 'Щедрое сочетание морепродуктов на тонком тесте.', price: 650, category: 'Пицца', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/25c496e6-59d0-44e4-a3ec-bccc7d567e32.jpg' },
   
-  { id: '20', name: 'Цезарь с курицей', description: 'Классический салат с нежной курицей и хрустящими сухариками.', price: 380, category: 'Салаты' },
-  { id: '21', name: 'Цезарь с креветками', description: 'Изысканный салат с сочными креветками.', price: 450, category: 'Салаты' },
-  { id: '22', name: 'Хрустящие баклажаны', description: 'Оригинальный салат с хрустящими баклажанами в азиатском стиле.', price: 340, category: 'Салаты' },
-  { id: '23', name: 'Салат Ростбиф', description: 'Сытный салат с нежным ростбифом.', price: 420, category: 'Салаты' },
-  { id: '24', name: 'Салат Ливанский', description: 'Свежий салат с восточными нотками.', price: 360, category: 'Салаты' },
+  { id: '20', name: 'Цезарь с курицей', description: 'Классический салат с нежной курицей и хрустящими сухариками.', price: 380, category: 'Салаты', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '21', name: 'Цезарь с креветками', description: 'Изысканный салат с сочными креветками.', price: 450, category: 'Салаты', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '22', name: 'Хрустящие баклажаны', description: 'Оригинальный салат с хрустящими баклажанами в азиатском стиле.', price: 340, category: 'Салаты', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '23', name: 'Салат Ростбиф', description: 'Сытный салат с нежным ростбифом.', price: 420, category: 'Салаты', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '24', name: 'Салат Ливанский', description: 'Свежий салат с восточными нотками.', price: 360, category: 'Салаты', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
   
-  { id: '25', name: 'Паста Карбонара', description: 'Классическая итальянская паста со сливочным соусом.', price: 420, category: 'Паста' },
-  { id: '26', name: 'Паста курица-грибы', description: 'Сытная паста с курицей и ароматными грибами.', price: 440, category: 'Паста' },
-  { id: '27', name: 'Паста с морепродуктами', description: 'Изысканная паста с морепродуктами.', price: 520, category: 'Паста' },
-  { id: '28', name: 'Паста классическая карбонара без сливок', description: 'Аутентичная карбонара по римскому рецепту.', price: 450, category: 'Паста' },
+  { id: '25', name: 'Паста Карбонара', description: 'Классическая итальянская паста со сливочным соусом.', price: 420, category: 'Паста', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '26', name: 'Паста курица-грибы', description: 'Сытная паста с курицей и ароматными грибами.', price: 440, category: 'Паста', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '27', name: 'Паста с морепродуктами', description: 'Изысканная паста с морепродуктами.', price: 520, category: 'Паста', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '28', name: 'Паста классическая карбонара без сливок', description: 'Аутентичная карбонара по римскому рецепту.', price: 450, category: 'Паста', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
   
-  { id: '29', name: 'Хачапури по-Аджарски', description: 'Традиционная лодочка с сыром, маслом и яйцом.', price: 380, category: 'Хачапури' },
-  { id: '30', name: 'Хачапури карбонара', description: 'Авторское сочетание грузинской и итальянской кухни.', price: 420, category: 'Хачапури' },
-  { id: '31', name: 'Хачапури по-Мегрельски', description: 'Круглый хачапури с сыром внутри и снаружи.', price: 400, category: 'Хачапури' },
-  { id: '32', name: 'Хачапури по-Имеретински', description: 'Классический круглый хачапури с сыром.', price: 360, category: 'Хачапури' },
+  { id: '29', name: 'Хачапури по-Аджарски', description: 'Традиционная лодочка с сыром, маслом и яйцом.', price: 380, category: 'Хачапури', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '30', name: 'Хачапури карбонара', description: 'Авторское сочетание грузинской и итальянской кухни.', price: 420, category: 'Хачапури', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '31', name: 'Хачапури по-Мегрельски', description: 'Круглый хачапури с сыром внутри и снаружи.', price: 400, category: 'Хачапури', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
+  { id: '32', name: 'Хачапури по-Имеретински', description: 'Классический круглый хачапури с сыром.', price: 360, category: 'Хачапури', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/0bae9549-7cc5-49f4-80be-f601743e6d6c.jpg' },
   
-  { id: '33', name: 'Картофель Фри', description: 'Классическое фри подойдет для детей.', price: 180, category: 'Закуски' },
-  { id: '34', name: 'Наггетсы', description: 'Обжаренное куриное филе в панировочных сухарях.', price: 220, category: 'Закуски' },
-  { id: '35', name: 'Сэндвич с креветками', description: 'Свежий сэндвич с сочными креветками.', price: 320, category: 'Закуски' },
-  { id: '36', name: 'Сэндвич с цыпленком', description: 'Сытный сэндвич с нежным цыпленком.', price: 280, category: 'Закуски' },
+  { id: '33', name: 'Картофель Фри', description: 'Классическое фри подойдет для детей.', price: 180, category: 'Закуски', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '34', name: 'Наггетсы', description: 'Обжаренное куриное филе в панировочных сухарях.', price: 220, category: 'Закуски', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '35', name: 'Сэндвич с креветками', description: 'Свежий сэндвич с сочными креветками.', price: 320, category: 'Закуски', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '36', name: 'Сэндвич с цыпленком', description: 'Сытный сэндвич с нежным цыпленком.', price: 280, category: 'Закуски', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
   
-  { id: '37', name: 'Морс ягодный', description: 'Освежающий напиток из лесных ягод.', price: 120, category: 'Напитки' },
-  { id: '38', name: 'Морс облепихово-апельсиновый', description: 'Витаминный напиток с облепихой и апельсином.', price: 140, category: 'Напитки' },
-  { id: '39', name: 'Детокс', description: 'Полезный детокс-напиток.', price: 160, category: 'Напитки' },
-  { id: '40', name: 'Компот с сухофруктами', description: 'Домашний компот из отборных сухофруктов.', price: 110, category: 'Напитки' },
+  { id: '37', name: 'Морс ягодный', description: 'Освежающий напиток из лесных ягод.', price: 120, category: 'Напитки', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '38', name: 'Морс облепихово-апельсиновый', description: 'Витаминный напиток с облепихой и апельсином.', price: 140, category: 'Напитки', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '39', name: 'Детокс', description: 'Полезный детокс-напиток.', price: 160, category: 'Напитки', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
+  { id: '40', name: 'Компот с сухофруктами', description: 'Домашний компот из отборных сухофруктов.', price: 110, category: 'Напитки', image: 'https://cdn.poehali.dev/projects/c576e287-32fd-48a6-a647-9ed3adb3dfa0/files/b873cfc1-7116-4fda-bb4c-98dcd3a21062.jpg' },
 ];
 
-const categories = ['Супы', 'Пан-Азия', 'Хинкали', 'Пицца', 'Салаты', 'Паста', 'Хачапури', 'Закуски', 'Напитки'];
+const categories = ['Все меню', 'Супы', 'Пан-Азия', 'Хинкали', 'Пицца', 'Салаты', 'Паста', 'Хачапури', 'Закуски', 'Напитки'];
 
 export default function Index() {
   const [cart, setCart] = useState<CartItem[]>([]);
-  const [activeCategory, setActiveCategory] = useState<string>('Супы');
+  const [activeCategory, setActiveCategory] = useState<string>('Все меню');
 
   const addToCart = (item: MenuItem) => {
     setCart(prev => {
@@ -105,7 +106,7 @@ export default function Index() {
             <div className="flex items-center gap-3">
               <div className="text-3xl">🍜</div>
               <div>
-                <h1 className="text-2xl font-bold">Pshonka s Maslom</h1>
+                <h1 className="text-2xl font-bold decorative-font">Pshonka s Maslom</h1>
                 <p className="text-sm opacity-90">Доставка за 30 минут по Уфе</p>
               </div>
             </div>
@@ -180,7 +181,7 @@ export default function Index() {
       <section className="bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/20 py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto animate-fade-in">
-            <h2 className="text-5xl font-bold mb-6 text-primary">
+            <h2 className="text-5xl font-bold mb-6 text-primary decorative-font">
               Многонациональная кухня
             </h2>
             <p className="text-xl text-foreground/80 mb-8">
@@ -196,7 +197,7 @@ export default function Index() {
 
       <section id="menu" className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary">Меню</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-primary decorative-font">Меню</h2>
           
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map(category => (
@@ -211,19 +212,49 @@ export default function Index() {
             ))}
           </div>
 
-          {categories.map(category => (
-            <div
-              key={category}
-              className={`mb-16 animate-fade-in ${activeCategory !== category && 'hidden'}`}
-            >
-              <h3 className="text-3xl font-bold mb-6 text-primary border-b-2 border-primary/20 pb-2">
-                {category}
+          {activeCategory === 'Все меню' ? (
+            categories.filter(cat => cat !== 'Все меню').map(category => (
+              <div key={category} className="mb-16 animate-fade-in">
+                <h3 className="text-3xl font-bold mb-6 text-primary border-b-2 border-primary/20 pb-2 decorative-font">
+                  {category}
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {menuData
+                    .filter(item => item.category === category)
+                    .map(item => (
+                      <Card key={item.id} className="hover:shadow-lg transition-all hover:scale-[1.02] overflow-hidden">
+                        <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
+                        <CardContent className="p-6">
+                          <h4 className="text-xl font-semibold mb-2 text-foreground">
+                            {item.name}
+                          </h4>
+                          <p className="text-sm text-muted-foreground mb-4 min-h-[60px]">
+                            {item.description}
+                          </p>
+                          <div className="flex justify-between items-center">
+                            <span className="text-2xl font-bold text-primary">{item.price} ₽</span>
+                            <Button onClick={() => addToCart(item)} className="gap-2">
+                              <Icon name="Plus" size={18} />
+                              В корзину
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="mb-16 animate-fade-in">
+              <h3 className="text-3xl font-bold mb-6 text-primary border-b-2 border-primary/20 pb-2 decorative-font">
+                {activeCategory}
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {menuData
-                  .filter(item => item.category === category)
+                  .filter(item => item.category === activeCategory)
                   .map(item => (
-                    <Card key={item.id} className="hover:shadow-lg transition-all hover:scale-[1.02]">
+                    <Card key={item.id} className="hover:shadow-lg transition-all hover:scale-[1.02] overflow-hidden">
+                      <img src={item.image} alt={item.name} className="w-full h-48 object-cover" />
                       <CardContent className="p-6">
                         <h4 className="text-xl font-semibold mb-2 text-foreground">
                           {item.name}
@@ -243,7 +274,7 @@ export default function Index() {
                   ))}
               </div>
             </div>
-          ))}
+          )}
         </div>
       </section>
 
